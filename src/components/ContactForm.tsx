@@ -1,9 +1,15 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useRef } from 'react';
 import type { ContactFormLabels } from '../types/data';
 
 interface ContactFormProps {
   labels: ContactFormLabels;
   email: string;
+}
+
+interface FormErrors {
+  name?: string;
+  contact?: string;
+  message?: string;
 }
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mppqkryk';
@@ -13,14 +19,88 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
     name: '',
     contact: '',
     message: '',
-    _gotcha: '', // honeypot
+    _gotcha: '',
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState({
+    name: false,
+    contact: false,
+    message: false,
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  
+  const nameRef = useRef<HTMLInputElement>(null);
+  const contactRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const validateEmail = (email: string): boolean => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email.toLowerCase());
+  };
+
+  const validateField = (field: keyof FormErrors, value: string): string | undefined => {
+    switch (field) {
+      case 'name':
+        if (!value.trim()) return labels.validation.nameEmpty;
+        break;
+      case 'contact':
+        if (!value.trim()) return labels.validation.emailEmpty;
+        if (!validateEmail(value.trim())) return labels.validation.emailInvalid;
+        break;
+      case 'message':
+        if (!value.trim()) return labels.validation.messageEmpty;
+        if (value.trim().length < 10) return labels.validation.messageTooShort;
+        break;
+    }
+    return undefined;
+  };
+
+  const validateAllFields = (): FormErrors => {
+    const newErrors: FormErrors = {};
+    const nameError = validateField('name', formState.name);
+    const contactError = validateField('contact', formState.contact);
+    const messageError = validateField('message', formState.message);
+    
+    if (nameError) newErrors.name = nameError;
+    if (contactError) newErrors.contact = contactError;
+    if (messageError) newErrors.message = messageError;
+    
+    return newErrors;
+  };
+
+  const handleBlur = (field: keyof FormErrors) => {
+    setTouched({ ...touched, [field]: true });
+    const error = validateField(field, formState[field]);
+    setErrors({ ...errors, [field]: error });
+  };
+
+  const handleChange = (field: keyof typeof formState, value: string) => {
+    setFormState({ ...formState, [field]: value });
+    if (touched[field as keyof typeof touched]) {
+      const error = validateField(field as keyof FormErrors, value);
+      setErrors({ ...errors, [field]: error });
+    }
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
-    if (formState._gotcha) return; // spam protection
+    if (formState._gotcha) return;
+    
+    const newErrors = validateAllFields();
+    setErrors(newErrors);
+    setTouched({ name: true, contact: true, message: true });
+    
+    if (Object.keys(newErrors).length > 0) {
+      if (newErrors.name) {
+        nameRef.current?.focus();
+      } else if (newErrors.contact) {
+        contactRef.current?.focus();
+      } else if (newErrors.message) {
+        messageRef.current?.focus();
+      }
+      return;
+    }
     
     setStatus('loading');
     
@@ -38,6 +118,8 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
       if (response.ok) {
         setStatus('success');
         setFormState({ name: '', contact: '', message: '', _gotcha: '' });
+        setErrors({});
+        setTouched({ name: false, contact: false, message: false });
       } else {
         setStatus('error');
       }
@@ -46,15 +128,23 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
     }
   };
 
-  const inputStyle = {
+  const inputStyle = (hasError: boolean) => ({
     width: '100%',
     padding: '14px 16px',
     background: 'var(--elevated)',
-    border: '1px solid var(--hairline)',
+    border: `1px solid ${hasError ? '#e85d5d' : 'var(--hairline)'}`,
     borderRadius: '8px',
     color: 'var(--text)',
     fontSize: '15px',
     fontFamily: 'var(--body)',
+    transition: 'border-color .2s',
+  });
+
+  const errorStyle = {
+    marginTop: '6px',
+    fontSize: '13px',
+    color: '#e85d5d',
+    lineHeight: 1.4,
   };
 
   return (
@@ -79,47 +169,82 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           {labels.success}
         </p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div style={{ marginBottom: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}>
+            <label 
+              htmlFor="contact-name"
+              style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}
+            >
               {labels.fields.name}
             </label>
             <input
+              id="contact-name"
+              ref={nameRef}
               type="text"
-              required
               value={formState.name}
-              onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-              style={inputStyle}
+              onChange={(e) => handleChange('name', e.target.value)}
+              onBlur={() => handleBlur('name')}
+              style={inputStyle(!!errors.name && touched.name)}
+              aria-invalid={!!errors.name && touched.name}
+              aria-describedby={errors.name && touched.name ? 'name-error' : undefined}
             />
+            {errors.name && touched.name && (
+              <div id="name-error" role="alert" style={errorStyle}>
+                {errors.name}
+              </div>
+            )}
           </div>
           
           <div style={{ marginBottom: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}>
+            <label 
+              htmlFor="contact-email"
+              style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}
+            >
               {labels.fields.contact}
             </label>
             <input
+              id="contact-email"
+              ref={contactRef}
               type="text"
-              required
               value={formState.contact}
-              onChange={(e) => setFormState({ ...formState, contact: e.target.value })}
-              style={inputStyle}
+              onChange={(e) => handleChange('contact', e.target.value)}
+              onBlur={() => handleBlur('contact')}
+              style={inputStyle(!!errors.contact && touched.contact)}
+              aria-invalid={!!errors.contact && touched.contact}
+              aria-describedby={errors.contact && touched.contact ? 'contact-error' : undefined}
             />
+            {errors.contact && touched.contact && (
+              <div id="contact-error" role="alert" style={errorStyle}>
+                {errors.contact}
+              </div>
+            )}
           </div>
           
           <div style={{ marginBottom: '20px' }}>
-            <label style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}>
+            <label 
+              htmlFor="contact-message"
+              style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}
+            >
               {labels.fields.message}
             </label>
             <textarea
-              required
+              id="contact-message"
+              ref={messageRef}
               rows={5}
               value={formState.message}
-              onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-              style={{ ...inputStyle, resize: 'vertical', minHeight: '120px' }}
+              onChange={(e) => handleChange('message', e.target.value)}
+              onBlur={() => handleBlur('message')}
+              style={{ ...inputStyle(!!errors.message && touched.message), resize: 'vertical', minHeight: '120px' }}
+              aria-invalid={!!errors.message && touched.message}
+              aria-describedby={errors.message && touched.message ? 'message-error' : undefined}
             />
+            {errors.message && touched.message && (
+              <div id="message-error" role="alert" style={errorStyle}>
+                {errors.message}
+              </div>
+            )}
           </div>
           
-          {/* Honeypot */}
           <input
             type="text"
             name="_gotcha"
@@ -151,7 +276,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           </button>
           
           {status === 'error' && (
-            <p style={{ marginTop: '16px', fontSize: '15px', color: 'var(--orange)' }}>
+            <p style={{ marginTop: '16px', fontSize: '15px', color: '#e85d5d' }}>
               {labels.error}
             </p>
           )}

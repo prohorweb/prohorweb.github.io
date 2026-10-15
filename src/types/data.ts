@@ -73,6 +73,13 @@ export interface ContactFormLabels {
   success: string;
   error: string;
   fallback: string;
+  validation: {
+    nameEmpty: string;
+    emailEmpty: string;
+    emailInvalid: string;
+    messageEmpty: string;
+    messageTooShort: string;
+  };
 }
 
 export interface ContactsData {

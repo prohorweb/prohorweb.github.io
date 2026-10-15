@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import Hero from './components/Hero';
-import About from './components/About';
 import AI from './components/AI';
 import Architecture from './components/Architecture';
 import Stack from './components/Stack';
@@ -9,7 +8,6 @@ import ThreeScene from './components/ThreeScene';
 import ParallaxBackground from './components/ParallaxBackground';
 
 import profileData from './data/profile.json';
-import aboutData from './data/about.json';
 import aiData from './data/ai.json';
 import architectureData from './data/architecture.json';
 import stackData from './data/stack.json';
@@ -57,7 +55,6 @@ function App() {
           <Stack data={stackData} />
           <AI data={aiData} />
           <Architecture data={architectureData} />
-          <About data={aboutData} />
           <Contacts data={contactsData} />
         </main>
         <footer style={{ 
@@ -68,7 +65,7 @@ function App() {
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 32px' }}>
             <div className="mono" style={{ color: 'var(--secondary)', letterSpacing: '.12em' }}>
-              &copy; 2026 Prokhor Efimov / AI-Driven Fullstack Engineer
+              &copy; 2026 Prokhor Efimov / Fullstack AI-Driven Engineer
             </div>
           </div>
         </footer>

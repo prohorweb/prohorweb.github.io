@@ -110,7 +110,7 @@ npm run preview
 - Деплоит `dist/` через `actions/deploy-pages`
 - Автоматически копирует `public/CNAME` в `dist/` для кастомного домена
 
-## 🌐 Кастомный домен efimoff.pro
+## 🌐 Кастомный домен prohordev.ru
 
 **DNS настройка** (у вашего регистратора доменов):
 
@@ -130,7 +130,7 @@ npm run preview
 3. Дождитесь DNS propagation (до 24 часов, обычно быстрее)
 
 **После DNS настройки**:
-- Сайт будет доступен на `https://efimoff.pro`
+- Сайт будет доступен на `https://prohordev.ru`
 - HTTPS сертификат выпустится автоматически (GitHub Pages + Let's Encrypt)
 - Файл `public/CNAME` гарантирует, что GitHub Pages знает о кастомном домене
 

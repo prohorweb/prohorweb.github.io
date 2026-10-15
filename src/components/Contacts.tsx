@@ -79,7 +79,7 @@ export default function Contacts({ data }: ContactsProps) {
         }}>
           {data.info.map((item) => (
             <div key={item.label}>
-              <div className="mono" style={{ marginBottom: '6px', color: 'var(--orange)' }}>
+              <div className="mono" style={{ marginBottom: '6px', color: 'var(--gold)' }}>
                 {item.label}
               </div>
               <div style={{ fontSize: '15px', color: 'var(--text)', fontWeight: 500 }}>

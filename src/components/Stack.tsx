@@ -35,7 +35,7 @@ export default function Stack({ data }: StackProps) {
                 fontFamily: 'var(--mono)',
                 letterSpacing: '.12em',
                 textTransform: 'uppercase',
-                color: 'var(--orange)',
+                color: 'var(--gold)',
                 marginBottom: '16px',
               }}>
                 {category.name}

@@ -36,7 +36,7 @@ export default function AI({ data }: AIProps) {
         
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '24px',
         }}>
           {data.cards.map((card) => (
@@ -49,7 +49,7 @@ export default function AI({ data }: AIProps) {
                 padding: '20px',
               }}
             >
-              <div className="mono" style={{ marginBottom: '12px', color: 'var(--orange)' }}>
+              <div className="mono" style={{ marginBottom: '12px', color: 'var(--gold)' }}>
                 {card.label}
               </div>
               <h3 style={{

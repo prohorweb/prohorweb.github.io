@@ -42,7 +42,6 @@ export default function ThreeScene() {
     // Colors
     const gold = new THREE.Color(0xD6B36A);
     const goldLight = new THREE.Color(0xF0D7A1);
-    const orange = new THREE.Color(0xD86A2D);
 
     // Create neural network nodes
     const nodeCount = isMobile ? 60 : 120;
@@ -61,7 +60,7 @@ export default function ThreeScene() {
       const z = radius * Math.cos(phi);
       
       const nodeMaterial = new THREE.MeshBasicMaterial({
-        color: layer === 0 ? gold : layer === 1 ? goldLight : orange,
+        color: layer === 0 ? gold : goldLight,
         transparent: true,
         opacity: 0.8
       });

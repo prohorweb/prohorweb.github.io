@@ -35,8 +35,8 @@ export default function Hero({ data }: HeroProps) {
               width: '200px',
               height: '200px',
               borderRadius: '50%',
-              border: '4px solid var(--gold)',
-              boxShadow: '0 0 40px rgba(214, 179, 106, .4)',
+              border: '1px solid var(--gold)',
+              boxShadow: '0 0 16px rgba(214, 179, 106, .15)',
               objectFit: 'cover',
             }}
           />
@@ -47,13 +47,14 @@ export default function Hero({ data }: HeroProps) {
         </div>
         
         <h1 style={{
-          fontFamily: 'var(--display)',
+          fontFamily: 'var(--mono)',
           fontSize: 'clamp(32px, 6vw, 64px)',
-          fontWeight: 700,
+          fontWeight: 400,
           lineHeight: 1.1,
           marginBottom: '16px',
           color: 'var(--gold-light)',
           letterSpacing: '-.02em',
+          textTransform: 'uppercase',
         }}>
           {data.name}
         </h1>

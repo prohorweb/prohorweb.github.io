@@ -1,0 +1,40 @@
+:root {
+  --bg: #06070A;
+  --surface: #0D1016;
+  --elevated: #121722;
+  --text: #F5F7FA;
+  --secondary: #9BA4B2;
+  --gold: #D6B36A;
+  --gold-light: #F0D7A1;
+  --orange: #D86A2D;
+  --hairline: rgba(255, 255, 255, .08);
+  --gold-border: rgba(214, 179, 106, .22);
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}

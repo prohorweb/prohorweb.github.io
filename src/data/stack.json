@@ -1,0 +1,57 @@
+{
+  "sectionNumber": "04 / Стек",
+  "title": "Технологический стек",
+  "categories": [
+    {
+      "name": "Backend",
+      "tags": [
+        "PHP 8+",
+        "Laravel",
+        "WordPress",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "REST",
+        "GraphQL",
+        "OAuth2",
+        "JWT"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "tags": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Vite",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "tags": [
+        "Docker Compose",
+        "Git",
+        "GitHub Actions",
+        "Linux",
+        "Nginx",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "AI Tools",
+      "tags": [
+        "Cursor",
+        "Cline",
+        "GitHub Copilot",
+        "LM Studio",
+        "OpenRouter"
+      ]
+    }
+  ]
+}

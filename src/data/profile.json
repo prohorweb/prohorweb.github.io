@@ -1,0 +1,25 @@
+{
+  "name": "Прохор Ефимов",
+  "title": "Fullstack (PHP + JavaScript) · AI-Native",
+  "label": "Developer / Engineer",
+  "tagline": "С 2010 года в разработке. 15+ лет коммерческого опыта — создаю веб-приложения от требований до релиза и сопровождения.",
+  "photo": "/assets/img/profile.jpg",
+  "links": [
+    {
+      "label": "Telegram",
+      "url": "https://t.me/proef",
+      "icon": "telegram",
+      "primary": true
+    },
+    {
+      "label": "Email",
+      "url": "mailto:prohorweb@gmail.com",
+      "icon": "email"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/prohorweb",
+      "icon": "github"
+    }
+  ]
+}

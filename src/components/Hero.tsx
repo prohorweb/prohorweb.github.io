@@ -102,18 +102,12 @@ export default function Hero({ data }: HeroProps) {
                 cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
-                if (link.primary) {
-                  e.currentTarget.style.background = 'var(--gold-light)';
-                } else {
-                  e.currentTarget.style.borderColor = 'var(--gold-border)';
-                }
+                e.currentTarget.style.borderColor = 'var(--hairline)';
+                e.currentTarget.style.opacity = '0.8';
               }}
               onMouseLeave={(e) => {
-                if (link.primary) {
-                  e.currentTarget.style.background = 'var(--gold)';
-                } else {
-                  e.currentTarget.style.borderColor = 'var(--hairline)';
-                }
+                e.currentTarget.style.borderColor = 'var(--hairline)';
+                e.currentTarget.style.opacity = '1';
               }}
             >
               {link.label}

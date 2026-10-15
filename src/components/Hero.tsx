@@ -9,6 +9,7 @@ export default function Hero({ data }: HeroProps) {
   return (
     <section style={{
       minHeight: '100vh',
+      maxHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

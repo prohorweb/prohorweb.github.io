@@ -258,19 +258,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           <button
             type="submit"
             disabled={status === 'loading'}
-            style={{
-              padding: '14px 32px',
-              background: 'var(--gold)',
-              color: 'var(--bg)',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '15px',
-              fontWeight: 600,
-              cursor: 'pointer',
-              transition: 'background .2s',
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.background = 'var(--gold)'}
-            onMouseLeave={(e) => e.currentTarget.style.background = 'var(--gold)'}
+            className="btn-gold"
           >
             {status === 'loading' ? labels.submitting : labels.submit}
           </button>

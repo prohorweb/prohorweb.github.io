@@ -90,26 +90,7 @@ export default function Hero({ data }: HeroProps) {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                padding: link.primary ? '14px 32px' : '14px 28px',
-                background: link.primary ? 'var(--gold)' : 'var(--surface)',
-                color: link.primary ? 'var(--bg)' : 'var(--text)',
-                border: `1px solid ${link.primary ? 'var(--gold)' : 'var(--hairline)'}`,
-                borderRadius: '8px',
-                textDecoration: 'none',
-                fontWeight: 500,
-                fontSize: '15px',
-                transition: 'all .2s',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'var(--hairline)';
-                e.currentTarget.style.opacity = '0.8';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'var(--hairline)';
-                e.currentTarget.style.opacity = '1';
-              }}
+              className="btn-gold"
             >
               {link.label}
             </a>

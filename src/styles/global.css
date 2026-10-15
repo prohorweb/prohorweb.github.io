@@ -37,3 +37,40 @@ body {
   text-transform: uppercase;
   color: var(--secondary);
 }
+
+.btn-gold {
+  padding: 14px 28px;
+  background: var(--surface);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-gold:hover {
+  background: #D6B36A;
+  color: #0B0D12;
+}
+
+.btn-gold:active {
+  background: #C29F52;
+  color: #0B0D12;
+  transform: translateY(1px);
+}
+
+.btn-gold:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.btn-gold:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

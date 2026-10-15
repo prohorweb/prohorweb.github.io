@@ -55,9 +55,9 @@ function App() {
         <Hero data={profileData} />
         <main>
           <About data={aboutData} />
+          <Stack data={stackData} />
           <AI data={aiData} />
           <Architecture data={architectureData} />
-          <Stack data={stackData} />
           <Contacts data={contactsData} />
         </main>
         <footer style={{ 
@@ -68,7 +68,7 @@ function App() {
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 32px' }}>
             <div className="mono" style={{ color: 'var(--secondary)', letterSpacing: '.12em' }}>
-              &copy; 2026 Prokhor Efimov / Fullstack Developer · AI-Native
+              &copy; 2026 Prokhor Efimov / AI-Driven Fullstack Engineer
             </div>
           </div>
         </footer>

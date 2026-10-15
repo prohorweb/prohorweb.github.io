@@ -1,5 +1,5 @@
 {
-  "sectionNumber": "04 / Стек",
+  "sectionNumber": "02 / Стек",
   "title": "Технологический стек",
   "categories": [
     {
@@ -17,6 +17,13 @@
         "GraphQL",
         "OAuth2",
         "JWT"
+      ]
+    },
+    {
+      "name": "Также знаком",
+      "tags": [
+        "Python",
+        "Go"
       ]
     },
     {

@@ -102,13 +102,37 @@ npm run preview
 1. Зайдите в Settings → Pages
 2. Source: **GitHub Actions**
 3. Workflow `.github/workflows/deploy.yml` запустится автоматически при push в `main`
+4. После первого деплоя включите **Enforce HTTPS** в Settings → Pages
 
 **Workflow**:
 - Устанавливает Node.js 20
 - Запускает `npm ci && npm run build`
 - Деплоит `dist/` через `actions/deploy-pages`
+- Автоматически копирует `public/CNAME` в `dist/` для кастомного домена
 
-Сайт доступен на `https://prohorweb.github.io`
+## 🌐 Кастомный домен efimoff.pro
+
+**DNS настройка** (у вашего регистратора доменов):
+
+1. **A записи** (apex домен):
+   ```
+   Type: A    Name: @    Value: 185.199.108.153
+   Type: A    Name: @    Value: 185.199.109.153
+   Type: A    Name: @    Value: 185.199.110.153
+   Type: A    Name: @    Value: 185.199.111.153
+   ```
+
+2. **CNAME запись** (www поддомен):
+   ```
+   Type: CNAME    Name: www    Value: prohorweb.github.io
+   ```
+
+3. Дождитесь DNS propagation (до 24 часов, обычно быстрее)
+
+**После DNS настройки**:
+- Сайт будет доступен на `https://efimoff.pro`
+- HTTPS сертификат выпустится автоматически (GitHub Pages + Let's Encrypt)
+- Файл `public/CNAME` гарантирует, что GitHub Pages знает о кастомном домене
 
 ## 📦 Основные зависимости
 

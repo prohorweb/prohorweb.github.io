@@ -67,17 +67,11 @@
 - Three.js анимация (вращающийся wireframe куб)
 - Parallax фон (сетка blueprints)
 
-## 📝 Настройка формы связи
+## 📝 Форма связи
 
-**Formspree**:
-1. Создайте форму на [formspree.io](https://formspree.io) для email `prohorweb@gmail.com`
-2. Подтвердите email
-3. В файле `src/components/ContactForm.tsx` замените `YOUR_FORM_ID` на ваш ID:
-   ```typescript
-   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
-   ```
+Форма настроена с Formspree (form id: `mppqkryk`, email: `prohorweb@gmail.com`).
 
-Форма использует honeypot защиту от спама и имеет fallback на mailto-ссылку.
+Имеет honeypot защиту от спама и fallback на mailto-ссылку.
 
 ## 🚀 Разработка
 

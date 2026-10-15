@@ -6,9 +6,7 @@ interface ContactFormProps {
   email: string;
 }
 
-// ⚠️ Replace YOUR_FORM_ID with your actual Formspree form ID
-// Create a form at https://formspree.io for prohorweb@gmail.com
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mppqkryk';
 
 export default function ContactForm({ labels, email }: ContactFormProps) {
   const [formState, setFormState] = useState({

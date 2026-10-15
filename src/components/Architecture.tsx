@@ -8,7 +8,9 @@ export default function Architecture({ data }: ArchitectureProps) {
   return (
     <section style={{
       padding: '80px 32px',
-      background: 'rgba(13, 16, 22, .98)',
+      background: 'rgba(13, 16, 22, 0.6)',
+      backdropFilter: 'blur(4px)',
+      WebkitBackdropFilter: 'blur(4px)',
       borderTop: '1px solid var(--hairline)',
     }}>
       <div style={{ maxWidth: '960px', margin: '0 auto' }}>

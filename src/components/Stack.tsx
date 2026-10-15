@@ -43,7 +43,9 @@ export default function Stack({ data }: StackProps) {
                     key={tag}
                     style={{
                       padding: '10px 18px',
-                      background: 'var(--surface)',
+                      background: 'rgba(13, 16, 22, 0.6)',
+                      backdropFilter: 'blur(4px)',
+                      WebkitBackdropFilter: 'blur(4px)',
                       border: '1px solid var(--hairline)',
                       borderRadius: '8px',
                       fontSize: '14px',

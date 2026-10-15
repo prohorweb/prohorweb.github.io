@@ -43,10 +43,12 @@ export default function AI({ data }: AIProps) {
             <div
               key={card.label}
               style={{
-                background: 'var(--surface)',
+                background: 'rgba(13, 16, 22, 0.6)',
+                backdropFilter: 'blur(4px)',
+                WebkitBackdropFilter: 'blur(4px)',
                 border: '1px solid var(--gold-border)',
                 borderRadius: '12px',
-                padding: '32px 28px',
+                padding: '32px 28px)',
               }}
             >
               <div className="mono" style={{ marginBottom: '12px', color: 'var(--orange)' }}>

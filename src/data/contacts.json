@@ -1,0 +1,50 @@
+{
+  "sectionNumber": "05 / Связь",
+  "title": "Контакты",
+  "email": "prohorweb@gmail.com",
+  "intro": "Готов обсудить сотрудничество и интересные проекты.",
+  "links": [
+    {
+      "label": "Telegram",
+      "url": "https://t.me/proef",
+      "icon": "telegram"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/prohorweb",
+      "icon": "github"
+    },
+    {
+      "label": "FL.ru",
+      "url": "https://www.fl.ru/users/prohorefimov/portfolio/",
+      "icon": "flru"
+    }
+  ],
+  "info": [
+    {
+      "label": "Локация",
+      "value": "Санкт-Петербург, Россия"
+    },
+    {
+      "label": "Опыт",
+      "value": "С 2010 года в разработке"
+    },
+    {
+      "label": "Работа",
+      "value": "Фриланс, полный цикл"
+    }
+  ],
+  "form": {
+    "title": "Форма связи",
+    "fields": {
+      "name": "Имя",
+      "contact": "Email или Telegram",
+      "message": "Сообщение"
+    },
+    "submit": "Отправить сообщение",
+    "submitting": "Отправка...",
+    "success": "Спасибо! Сообщение отправлено. Отвечу в ближайшее время.",
+    "error": "Не удалось отправить сообщение. Пожалуйста, напишите напрямую на prohorweb@gmail.com",
+    "fallback": "Или напишите напрямую:"
+  }
+}

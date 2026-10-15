@@ -54,10 +54,10 @@ function App() {
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Hero data={profileData} />
         <main>
-          <About data={aboutData} />
           <Stack data={stackData} />
           <AI data={aiData} />
           <Architecture data={architectureData} />
+          <About data={aboutData} />
           <Contacts data={contactsData} />
         </main>
         <footer style={{ 

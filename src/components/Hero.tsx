@@ -49,11 +49,12 @@ export default function Hero({ data }: HeroProps) {
         <h1 style={{
           fontFamily: 'var(--mono)',
           fontSize: 'clamp(32px, 6vw, 64px)',
-          fontWeight: 100,
+          fontWeight: 400,
           lineHeight: 1.1,
           marginBottom: '16px',
           color: 'var(--gold-light)',
           letterSpacing: '-.02em',
+          textTransform: 'uppercase',
         }}>
           {data.name}
         </h1>

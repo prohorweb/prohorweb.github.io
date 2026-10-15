@@ -41,7 +41,6 @@ export default function ThreeScene() {
 
     // Colors
     const gold = new THREE.Color(0xD6B36A);
-    const goldLight = new THREE.Color(0xF0D7A1);
 
     // Create neural network nodes
     const nodeCount = isMobile ? 60 : 120;
@@ -60,7 +59,7 @@ export default function ThreeScene() {
       const z = radius * Math.cos(phi);
       
       const nodeMaterial = new THREE.MeshBasicMaterial({
-        color: layer === 0 ? gold : goldLight,
+        color: gold,
         transparent: true,
         opacity: 0.8
       });
@@ -115,7 +114,7 @@ export default function ThreeScene() {
     const pulses: Pulse[] = [];
     const pulseGeometry = new THREE.SphereGeometry(0.12, 8, 8);
     const pulseMaterial = new THREE.MeshBasicMaterial({
-      color: goldLight,
+      color: gold,
       transparent: true,
       opacity: 0.9
     });

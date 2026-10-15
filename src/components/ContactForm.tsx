@@ -269,7 +269,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
               cursor: 'pointer',
               transition: 'background .2s',
             }}
-            onMouseEnter={(e) => e.currentTarget.style.background = 'var(--gold-light)'}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'var(--gold)'}
             onMouseLeave={(e) => e.currentTarget.style.background = 'var(--gold)'}
           >
             {status === 'loading' ? labels.submitting : labels.submit}

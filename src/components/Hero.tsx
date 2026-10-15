@@ -52,7 +52,7 @@ export default function Hero({ data }: HeroProps) {
           fontWeight: 400,
           lineHeight: 1.1,
           marginBottom: '16px',
-          color: 'var(--gold-light)',
+          color: 'var(--gold)',
           letterSpacing: '-.02em',
           textTransform: 'uppercase',
         }}>

@@ -41,19 +41,15 @@
         "Git",
         "GitHub Actions",
         "Linux",
+        "macOS",
         "Nginx",
         "CI/CD"
       ]
     },
     {
-      "name": "Окружение",
-      "tags": [
-        "macOS"
-      ]
-    },
-    {
       "name": "AI Tools",
       "tags": [
+        "Grok Bot",
         "Claude",
         "Cursor",
         "Cline",

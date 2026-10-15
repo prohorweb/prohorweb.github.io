@@ -11,7 +11,7 @@
     {
       "label": "02 · Выбор инструмента",
       "title": "Модели и инструменты",
-      "description": "Claude, Cursor, Cline, GitHub Copilot, Ollama, LM Studio, OpenRouter — выбираю под задачу"
+      "description": "Архитектура и ревью — Grok Bot, код — Cursor + Claude. Также Cline, GitHub Copilot, Ollama, LM Studio, OpenRouter"
     },
     {
       "label": "03 · Спецификация",

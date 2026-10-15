@@ -6,9 +6,9 @@
   --secondary: #9BA4B2;
   --gold: #D6B36A;
   --gold-light: #F0D7A1;
-  --orange: #D86A2D;
   --hairline: rgba(255, 255, 255, .08);
   --gold-border: rgba(214, 179, 106, .22);
+  --gold-hover: rgba(214, 179, 106, .15);
   --display: "Space Grotesk", system-ui, sans-serif;
   --body: "Inter", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;

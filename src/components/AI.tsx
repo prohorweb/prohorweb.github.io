@@ -49,7 +49,7 @@ export default function AI({ data }: AIProps) {
                 padding: '20px',
               }}
             >
-              <div className="mono" style={{ marginBottom: '12px', color: 'var(--orange)' }}>
+              <div className="mono" style={{ marginBottom: '12px', color: 'var(--gold)' }}>
                 {card.label}
               </div>
               <h3 style={{

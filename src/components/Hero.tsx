@@ -47,7 +47,7 @@ export default function Hero({ data }: HeroProps) {
         </div>
         
         <h1 style={{
-          fontFamily: 'var(--mono)',
+          fontFamily: 'var(--body)',
           fontSize: 'clamp(32px, 6vw, 64px)',
           fontWeight: 400,
           lineHeight: 1.1,

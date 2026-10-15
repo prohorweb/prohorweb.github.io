@@ -244,48 +244,6 @@
             border: 1px solid var(--border);
         }
         
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
-        
-        .project-card {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-        }
-        
-        .project-content {
-            padding: 24px;
-        }
-        
-        .project-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-        }
-        
-        .project-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-        }
-        
-        .project-link:hover {
-            color: var(--accent-hover);
-        }
-        
         .contact-links {
             display: flex;
             flex-wrap: wrap;
@@ -362,7 +320,6 @@
                 padding: 48px 0;
             }
             
-            .projects-grid,
             .stack-grid {
                 grid-template-columns: 1fr;
             }
@@ -493,42 +450,7 @@
             </div>
         </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2>Проекты</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>ExtraSport.ru</h3>
-                            <p>Сайт ExtraSport.ru — разработка и сопровождение.</p>
-                            <a href="https://extrasport.ru/" class="project-link" target="_blank" rel="noopener">
-                                Перейти на сайт →
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>NikolskiySobor.ru</h3>
-                            <p>Сайт NikolskiySobor.ru — разработка и сопровождение.</p>
-                            <a href="https://nikolskiysobor.ru/" class="project-link" target="_blank" rel="noopener">
-                                Перейти на сайт →
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>RussiaGoSurf.ru</h3>
-                            <p>Сайт RussiaGoSurf.ru — разработка и сопровождение.</p>
-                            <a href="https://russiagosurf.ru/" class="project-link" target="_blank" rel="noopener">
-                                Перейти на сайт →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
+<section id="contact">
             <div class="container">
                 <h2>Контакты</h2>
                 <p>Санкт-Петербург, Россия</p>

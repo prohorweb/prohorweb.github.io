@@ -51,6 +51,12 @@
       ]
     },
     {
+      "name": "Окружение",
+      "tags": [
+        "macOS"
+      ]
+    },
+    {
       "name": "AI Tools",
       "tags": [
         "Claude",

@@ -8,6 +8,9 @@ export default function Stack({ data }: StackProps) {
   return (
     <section style={{
       padding: '80px 32px',
+      background: 'rgba(13, 16, 22, 0.6)',
+      backdropFilter: 'blur(4px)',
+      WebkitBackdropFilter: 'blur(4px)',
       borderTop: '1px solid var(--hairline)',
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -43,7 +46,7 @@ export default function Stack({ data }: StackProps) {
                     key={tag}
                     style={{
                       padding: '10px 18px',
-                      background: 'rgba(13, 16, 22, 0.6)',
+                      background: 'rgba(13, 16, 22, 0.5)',
                       backdropFilter: 'blur(4px)',
                       WebkitBackdropFilter: 'blur(4px)',
                       border: '1px solid var(--hairline)',

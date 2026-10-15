@@ -8,8 +8,7 @@
     {
       "label": "Telegram",
       "url": "https://t.me/proef",
-      "icon": "telegram",
-      "primary": true
+      "icon": "telegram"
     },
     {
       "label": "Email",

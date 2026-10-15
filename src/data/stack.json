@@ -1,5 +1,5 @@
 {
-  "sectionNumber": "04 / Стек",
+  "sectionNumber": "01 / Стек",
   "title": "Технологический стек",
   "categories": [
     {
@@ -16,7 +16,9 @@
         "REST",
         "GraphQL",
         "OAuth2",
-        "JWT"
+        "JWT",
+        "Python",
+        "Go"
       ]
     },
     {
@@ -44,11 +46,19 @@
       ]
     },
     {
+      "name": "Окружение",
+      "tags": [
+        "macOS"
+      ]
+    },
+    {
       "name": "AI Tools",
       "tags": [
+        "Claude",
         "Cursor",
         "Cline",
         "GitHub Copilot",
+        "Ollama",
         "LM Studio",
         "OpenRouter"
       ]

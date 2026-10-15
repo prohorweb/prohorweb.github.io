@@ -1,6 +1,6 @@
 # Прохор Ефимов — Portfolio Landing
 
-Персональный сайт-портфолио fullstack-разработчика с архитектурным уклоном и AI-Native подходом.
+Персональный сайт-портфолио Fullstack AI-Driven Engineer с архитектурным уклоном.
 
 ## 🏗️ Архитектура
 
@@ -46,11 +46,10 @@
 
 **Весь контент находится в JSON-файлах** `src/data/` — можно редактировать без изменения кода компонентов:
 
-- **`profile.json`** — имя, заголовок, фото, ссылки (Telegram, Email, GitHub)
-- **`about.json`** — раздел "Обо мне"
-- **`ai.json`** — раздел "Как я работаю с ИИ" (карточки A-D)
+- **`profile.json`** — имя, роль, стек, ссылки (Telegram, Email, GitHub)
+- **`stack.json`** — раздел "Технологический стек" (категории и теги, включая Python/Go)
+- **`ai.json`** — раздел "AI-Driven Development" (8 карточек)
 - **`architecture.json`** — раздел "Архитектурная экспертиза" (список экспертиз)
-- **`stack.json`** — раздел "Технологический стек" (категории и теги)
 - **`contacts.json`** — раздел "Контакты" (форма, ссылки, информация)
 
 Типы данных описаны в `src/types/data.ts` (TypeScript интерфейсы).
@@ -143,6 +142,6 @@ npm run preview
 
 ---
 
-**Автор**: Prokhor Efimov  
+**Автор**: Prohor Efimov  
 **Telegram**: [@proef](https://t.me/proef)  
 **Email**: [prohorweb@gmail.com](mailto:prohorweb@gmail.com)

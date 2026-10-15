@@ -35,8 +35,8 @@ export default function Hero({ data }: HeroProps) {
               width: '200px',
               height: '200px',
               borderRadius: '50%',
-              border: '4px solid var(--gold)',
-              boxShadow: '0 0 40px rgba(214, 179, 106, .4)',
+              border: '1px solid var(--gold)',
+              boxShadow: '0 0 16px rgba(214, 179, 106, .15)',
               objectFit: 'cover',
             }}
           />

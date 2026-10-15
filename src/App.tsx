@@ -65,7 +65,7 @@ function App() {
         }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 32px' }}>
             <div className="mono" style={{ color: 'var(--secondary)', letterSpacing: '.12em' }}>
-              &copy; 2026 Prokhor Efimov / Fullstack AI-Driven Engineer
+              &copy; 2026 Prohor Efimov / Fullstack AI-Driven Engineer
             </div>
           </div>
         </footer>

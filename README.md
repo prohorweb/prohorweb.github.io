@@ -142,6 +142,6 @@ npm run preview
 
 ---
 
-**Автор**: Prokhor Efimov  
+**Автор**: Prohor Efimov  
 **Telegram**: [@proef](https://t.me/proef)  
 **Email**: [prohorweb@gmail.com](mailto:prohorweb@gmail.com)

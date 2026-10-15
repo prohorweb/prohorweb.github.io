@@ -16,12 +16,7 @@
         "REST",
         "GraphQL",
         "OAuth2",
-        "JWT"
-      ]
-    },
-    {
-      "name": "Также знаком",
-      "tags": [
+        "JWT",
         "Python",
         "Go"
       ]

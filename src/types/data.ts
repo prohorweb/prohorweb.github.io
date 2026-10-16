@@ -37,6 +37,10 @@ export interface ArchitectureData {
   sectionNumber: string;
   title: string;
   items: string[];
+  about?: {
+    title: string;
+    paragraphs: string[];
+  };
 }
 
 export interface StackCategory {

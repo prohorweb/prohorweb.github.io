@@ -302,6 +302,31 @@ button {
   font-weight: 600;
 }
 
+.arch-about {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-about-title {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.arch-about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+
+.arch-about-text:last-child {
+  margin-bottom: 0;
+}
+
 /* Contacts Section */
 .contacts-section {
   padding: 80px 32px;

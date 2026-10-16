@@ -37,10 +37,11 @@ export default function Contacts({ data }: ContactsProps) {
         
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '20px',
           marginBottom: '48px',
-        }}>
+        }}
+        className="contacts-links">
           {data.links.map((link) => (
             <a
               key={link.label}

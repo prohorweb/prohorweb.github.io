@@ -7,83 +7,40 @@ interface ContactsProps {
 
 export default function Contacts({ data }: ContactsProps) {
   return (
-    <section style={{
-      padding: '80px 32px',
-      background: 'rgba(13, 16, 22, .98)',
-      borderTop: '1px solid var(--hairline)',
-    }}>
-      <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-        <div className="mono" style={{ marginBottom: '16px', color: 'var(--gold)' }}>
+    <section className="py-[180px] px-[32px] bg-[rgba(13,16,22,0.98)] border-t border-[var(--color-hairline)]">
+      <div className="max-w-[960px] mx-auto">
+        <div className="mono mb-[16px] text-[var(--color-gold)]">
           {data.sectionNumber}
         </div>
-        <h2 style={{
-          fontFamily: 'var(--display)',
-          fontSize: 'clamp(28px, 4vw, 42px)',
-          fontWeight: 600,
-          marginBottom: '20px',
-          color: 'var(--text)',
-        }}>
+        <h2 className="font-[var(--font-family-display)] text-[clamp(28px,4vw,42px)] font-semibold mb-[40px] text-[var(--color-text)]">
           {data.title}
         </h2>
         
-        <p style={{
-          fontSize: '17px',
-          lineHeight: 1.8,
-          marginBottom: '40px',
-          color: 'var(--secondary)',
-        }}>
+        <p className="text-[17px] leading-[1.8] mb-[80px] text-[var(--color-secondary)]">
           {data.intro}
         </p>
         
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '20px',
-          marginBottom: '48px',
-        }}
-        className="contacts-links">
+        <div className="grid contacts-links gap-[20px] mb-[96px]">
           {data.links.map((link) => (
             <a
               key={link.label}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                padding: '20px 24px',
-                background: 'var(--surface)',
-                border: '1px solid var(--hairline)',
-                borderRadius: '12px',
-                textDecoration: 'none',
-                color: 'var(--text)',
-                fontWeight: 500,
-                fontSize: '16px',
-                textAlign: 'center',
-                transition: 'border-color .2s',
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--gold-border)'}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--hairline)'}
+              className="py-[20px] px-[24px] bg-[var(--color-surface)] border border-[var(--color-hairline)] rounded-[12px] no-underline text-[var(--color-text)] font-medium text-base text-center transition-[border-color] duration-200 hover:border-[var(--color-gold-border)]"
             >
               {link.label}
             </a>
           ))}
         </div>
         
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '16px',
-          marginBottom: '48px',
-          padding: '28px',
-          background: 'var(--surface)',
-          border: '1px solid var(--gold-border)',
-          borderRadius: '12px',
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[16px] mb-[96px] p-[36px] bg-[var(--color-surface)] border border-[var(--color-gold-border)] rounded-[12px]">
           {data.info.map((item) => (
             <div key={item.label}>
-              <div className="mono" style={{ marginBottom: '6px', color: 'var(--gold)' }}>
+              <div className="mono mb-[6px] text-[var(--color-gold)]">
                 {item.label}
               </div>
-              <div style={{ fontSize: '15px', color: 'var(--text)', fontWeight: 500 }}>
+              <div className="text-[15px] text-[var(--color-text)] font-medium">
                 {item.value}
               </div>
             </div>

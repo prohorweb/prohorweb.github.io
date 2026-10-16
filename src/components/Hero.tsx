@@ -36,83 +36,36 @@ const renderIcon = (iconType: string) => {
 
 export default function Hero({ data }: HeroProps) {
   return (
-    <section style={{
-      minHeight: '100vh',
-      maxHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      position: 'relative',
-      padding: '80px 32px',
-    }}>
-      <div style={{ 
-        maxWidth: '960px', 
-        width: '100%',
-        textAlign: 'center',
-        position: 'relative',
-        zIndex: 2,
-      }}>
-        <div style={{ position: 'relative', display: 'inline-block', marginBottom: '32px' }}>
+    <section className="min-h-screen max-h-screen flex items-center justify-center relative py-20 px-8">
+      <div className="max-w-[960px] w-full text-center relative z-[2]">
+        <div className="relative inline-block mb-[32px]">
           <HeroHalo />
           <img 
             src={data.photo}
             alt={data.name}
             width="200"
             height="200"
-            style={{
-              position: 'relative',
-              width: '200px',
-              height: '200px',
-              borderRadius: '50%',
-              border: '1px solid var(--gold)',
-              boxShadow: '0 0 16px rgba(214, 179, 106, .15)',
-              objectFit: 'cover',
-            }}
+            className="relative w-[200px] h-[200px] rounded-full border border-[var(--color-gold)] shadow-[0_0_16px_rgba(214,179,106,0.15)] object-cover"
           />
         </div>
         
-        <div className="mono" style={{ marginBottom: '16px', color: 'var(--gold)' }}>
+        <div className="mono mb-[16px] text-[var(--color-gold)]">
           {data.label}
         </div>
         
-        <h1 style={{
-          fontFamily: 'var(--mono)',
-          fontSize: 'clamp(32px, 6vw, 64px)',
-          fontWeight: 400,
-          lineHeight: 1.1,
-          marginBottom: '16px',
-          color: 'var(--gold)',
-          letterSpacing: '-.02em',
-          textTransform: 'uppercase',
-        }}>
+        <h1 className="font-[var(--font-family-mono)] text-[clamp(32px,6vw,64px)] font-normal leading-[1.1] mb-[16px] text-[var(--color-gold)] tracking-[-0.02em] uppercase">
           {data.name}
         </h1>
         
-        <p style={{
-          fontSize: 'clamp(16px, 2.5vw, 22px)',
-          marginBottom: '24px',
-          color: 'var(--text)',
-          fontWeight: 500,
-        }}>
+        <p className="text-[clamp(16px,2.5vw,22px)] mb-[24px] text-[var(--color-text)] font-medium">
           {data.title}
         </p>
         
-        <p style={{
-          fontSize: '16px',
-          lineHeight: 1.7,
-          maxWidth: '640px',
-          margin: '0 auto 40px',
-          color: 'var(--secondary)',
-        }}>
+        <p className="text-base leading-[1.7] max-w-[640px] mx-auto mb-[40px] text-[var(--color-secondary)]">
           {data.tagline}
         </p>
         
-        <div style={{ 
-          display: 'flex', 
-          gap: '16px', 
-          justifyContent: 'center', 
-          flexWrap: 'wrap' 
-        }}>
+        <div className="flex gap-[16px] justify-center flex-wrap">
           {data.links.map((link) => (
             <a
               key={link.label}

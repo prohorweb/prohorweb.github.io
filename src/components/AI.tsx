@@ -6,62 +6,32 @@ interface AIProps {
 
 export default function AI({ data }: AIProps) {
   return (
-    <section style={{
-      padding: '80px 32px',
-      borderTop: '1px solid var(--hairline)',
-    }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="mono" style={{ marginBottom: '16px', color: 'var(--gold)' }}>
+    <section className="py-[180px] px-[32px] border-t border-[var(--color-hairline)]">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="mono mb-[16px] text-[var(--color-gold)]">
           {data.sectionNumber}
         </div>
-        <h2 style={{
-          fontFamily: 'var(--display)',
-          fontSize: 'clamp(28px, 4vw, 42px)',
-          fontWeight: 600,
-          marginBottom: '20px',
-          color: 'var(--text)',
-        }}>
+        <h2 className="font-[var(--font-family-display)] text-[clamp(28px,4vw,42px)] font-semibold mb-[20px] text-[var(--color-text)]">
           {data.title}
         </h2>
         
-        <p style={{
-          fontSize: '17px',
-          lineHeight: 1.8,
-          marginBottom: '48px',
-          color: 'var(--secondary)',
-          maxWidth: '720px',
-        }}>
+        <p className="text-[17px] leading-[1.8] mb-[110px] text-[var(--color-secondary)] max-w-[720px]">
           {data.intro}
         </p>
         
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '24px',
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-[110px] gap-y-[90px]">
           {data.cards.map((card) => (
             <div
               key={card.label}
-              style={{
-                background: 'var(--surface)',
-                border: '1px solid var(--gold-border)',
-                borderRadius: '12px',
-                padding: '20px',
-              }}
+              className="bg-[var(--color-surface)] border border-[var(--color-gold-border)] rounded-[12px] p-[20px]"
             >
-              <div className="mono" style={{ marginBottom: '12px', color: 'var(--gold)' }}>
+              <div className="mono mb-[12px] text-[var(--color-gold)]">
                 {card.label}
               </div>
-              <h3 style={{
-                fontFamily: 'var(--display)',
-                fontSize: '20px',
-                fontWeight: 600,
-                marginBottom: '12px',
-                color: 'var(--text)',
-              }}>
+              <h3 className="font-[var(--font-family-display)] text-[20px] font-semibold mb-[12px] text-[var(--color-text)]">
                 {card.title}
               </h3>
-              <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--secondary)' }}>
+              <p className="text-[15px] leading-[1.7] text-[var(--color-secondary)]">
                 {card.description}
               </p>
             </div>

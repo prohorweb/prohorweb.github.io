@@ -6,47 +6,19 @@ interface ArchitectureProps {
 
 export default function Architecture({ data }: ArchitectureProps) {
   return (
-    <section style={{
-      padding: '80px 32px',
-      background: 'rgba(13, 16, 22, 0.6)',
-      backdropFilter: 'blur(4px)',
-      WebkitBackdropFilter: 'blur(4px)',
-      borderTop: '1px solid var(--hairline)',
-    }}>
-      <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-        <div className="mono" style={{ marginBottom: '16px', color: 'var(--gold)' }}>
+    <section className="py-[180px] px-[32px] bg-[rgba(13,16,22,0.6)] backdrop-blur border-t border-[var(--color-hairline)]">
+      <div className="max-w-[960px] mx-auto">
+        <div className="mono mb-[16px] text-[var(--color-gold)]">
           {data.sectionNumber}
         </div>
-        <h2 style={{
-          fontFamily: 'var(--display)',
-          fontSize: 'clamp(28px, 4vw, 42px)',
-          fontWeight: 600,
-          marginBottom: '40px',
-          color: 'var(--text)',
-        }}>
+        <h2 className="font-[var(--font-family-display)] text-[clamp(28px,4vw,42px)] font-semibold mb-[80px] text-[var(--color-text)]">
           {data.title}
         </h2>
         
-        <ul style={{
-          listStyle: 'none',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '20px',
-        }}>
+        <ul className="list-none flex flex-col gap-[40px]">
           {data.items.map((item, idx) => (
-            <li key={idx} style={{
-              fontSize: '16px',
-              lineHeight: 1.7,
-              color: 'var(--secondary)',
-              paddingLeft: '28px',
-              position: 'relative',
-            }}>
-              <span style={{
-                position: 'absolute',
-                left: 0,
-                color: 'var(--gold)',
-                fontWeight: 600,
-              }}>
+            <li key={idx} className="text-base leading-[2.0] text-[var(--color-secondary)] pl-[28px] relative">
+              <span className="absolute left-0 text-[var(--color-gold)] font-semibold">
                 •
               </span>
               {item}

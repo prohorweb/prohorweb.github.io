@@ -49,7 +49,7 @@ function App() {
       <ParallaxBackground ref={parallaxRef} />
       <ThreeScene />
       
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div className="relative z-[1]">
         <Hero data={profileData} />
         <main>
           <Stack data={stackData} />
@@ -57,14 +57,9 @@ function App() {
           <Architecture data={architectureData} />
           <Contacts data={contactsData} />
         </main>
-        <footer style={{ 
-          padding: '48px 0', 
-          textAlign: 'center', 
-          background: 'rgba(13, 16, 22, .98)', 
-          borderTop: '1px solid var(--hairline)' 
-        }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 32px' }}>
-            <div className="mono" style={{ color: 'var(--secondary)', letterSpacing: '.12em' }}>
+        <footer className="py-[100px] text-center bg-[rgba(13,16,22,0.98)] border-t border-[var(--color-hairline)]">
+          <div className="max-w-[1200px] mx-auto px-[32px]">
+            <div className="mono text-[var(--color-secondary)] tracking-[0.12em]">
               &copy; 2026 Prohor Efimov / Fullstack AI-Driven Engineer
             </div>
           </div>

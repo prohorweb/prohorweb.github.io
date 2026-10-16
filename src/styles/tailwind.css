@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #06070A;
+  --color-surface: #0D1016;
+  --color-elevated: #121722;
+  --color-text: #F5F7FA;
+  --color-secondary: #9BA4B2;
+  --color-gold: #D6B36A;
+  --color-gold-dark: #C29F52;
+  --color-gold-darkest: #0B0D12;
+  --color-hairline: rgba(255, 255, 255, 0.08);
+  --color-gold-border: rgba(214, 179, 106, 0.22);
+  --color-gold-hover: rgba(214, 179, 106, 0.15);
+  --color-error: #e85d5d;
+  
+  --font-family-display: "Space Grotesk", system-ui, sans-serif;
+  --font-family-body: "Inter", system-ui, sans-serif;
+  --font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .mono {
+    font-family: var(--font-family-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
+
+  .btn-gold {
+    padding: 14px 28px;
+    background: var(--color-surface);
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    border-radius: 8px;
+    font-family: var(--font-family-body);
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .btn-gold:hover {
+    background: var(--color-gold);
+    color: var(--color-gold-darkest);
+  }
+
+  .btn-gold:active {
+    background: var(--color-gold-dark);
+    color: var(--color-gold-darkest);
+    transform: translateY(1px);
+  }
+
+  .btn-gold:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  .btn-gold:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-icon-gold {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-family-mono);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .btn-icon-gold:hover {
+    background: var(--color-gold);
+    color: var(--color-gold-darkest);
+    border-color: var(--color-gold);
+  }
+
+  .btn-icon-gold:active {
+    background: var(--color-gold-dark);
+    color: var(--color-gold-darkest);
+    transform: translateY(1px);
+  }
+
+  .btn-icon-gold:focus-visible {
+    background: var(--color-gold);
+    color: var(--color-gold-darkest);
+    border-color: var(--color-gold);
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  .btn-icon-gold svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+  }
+
+  .contacts-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    .contacts-links {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+
+@layer utilities {
+  input:focus,
+  textarea:focus,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 1px var(--color-gold);
+  }
+
+  input[aria-invalid="true"]:focus,
+  textarea[aria-invalid="true"]:focus {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 1px var(--color-error);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+}

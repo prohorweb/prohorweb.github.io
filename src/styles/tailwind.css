@@ -40,6 +40,12 @@ body {
   color: var(--secondary);
 }
 
+/* Main wrapper */
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 /* Hero Section */
 .hero-section {
   min-height: 100vh;
@@ -417,6 +423,22 @@ body {
   font-size: 13px;
   color: #e85d5d;
   line-height: 1.4;
+}
+
+.contact-form-success {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gold);
+}
+
+.contact-form-gotcha {
+  display: none;
+}
+
+.contact-form-submit-error {
+  margin-top: 16px;
+  font-size: 15px;
+  color: #e85d5d;
 }
 
 .contact-form-divider {

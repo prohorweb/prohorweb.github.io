@@ -49,7 +49,7 @@ function App() {
       <ParallaxBackground ref={parallaxRef} />
       <ThreeScene />
       
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div className="main-wrapper">
         <Hero data={profileData} />
         <main>
           <Stack data={stackData} />

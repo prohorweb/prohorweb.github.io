@@ -135,7 +135,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
       </h3>
       
       {status === 'success' ? (
-        <p style={{ fontSize: '16px', lineHeight: 1.6, color: 'var(--gold)' }}>
+        <p className="contact-form-success">
           {labels.success}
         </p>
       ) : (
@@ -218,7 +218,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           <input
             type="text"
             name="_gotcha"
-            style={{ display: 'none' }}
+            className="contact-form-gotcha"
             tabIndex={-1}
             autoComplete="off"
             value={formState._gotcha}
@@ -234,7 +234,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           </button>
           
           {status === 'error' && (
-            <p style={{ marginTop: '16px', fontSize: '15px', color: '#e85d5d' }}>
+            <p className="contact-form-submit-error">
               {labels.error}
             </p>
           )}

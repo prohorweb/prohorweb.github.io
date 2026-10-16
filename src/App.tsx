@@ -57,9 +57,9 @@ function App() {
           <Architecture data={architectureData} />
           <Contacts data={contactsData} />
         </main>
-        <footer className="py-[100px] text-center bg-[rgba(13,16,22,0.98)] border-t border-[var(--color-hairline)]">
+        <footer className="py-[48px] text-center bg-[rgba(13,16,22,0.98)] border-t border-[var(--hairline)]">
           <div className="max-w-[1200px] mx-auto px-[32px]">
-            <div className="mono text-[var(--color-secondary)] tracking-[0.12em]">
+            <div className="mono text-[var(--secondary)] tracking-[0.12em]">
               &copy; 2026 Prohor Efimov / Fullstack AI-Driven Engineer
             </div>
           </div>

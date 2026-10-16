@@ -36,7 +36,7 @@ const renderIcon = (iconType: string) => {
 
 export default function Hero({ data }: HeroProps) {
   return (
-    <section className="min-h-screen max-h-screen flex items-center justify-center relative py-20 px-8">
+    <section className="min-h-screen max-h-screen flex items-center justify-center relative py-[80px] px-[32px]">
       <div className="max-w-[960px] w-full text-center relative z-[2]">
         <div className="relative inline-block mb-[32px]">
           <HeroHalo />
@@ -45,23 +45,23 @@ export default function Hero({ data }: HeroProps) {
             alt={data.name}
             width="200"
             height="200"
-            className="relative w-[200px] h-[200px] rounded-full border border-[var(--color-gold)] shadow-[0_0_16px_rgba(214,179,106,0.15)] object-cover"
+            className="relative w-[200px] h-[200px] rounded-full border border-[var(--gold)] shadow-[0_0_16px_rgba(214,179,106,0.15)] object-cover"
           />
         </div>
         
-        <div className="mono mb-[16px] text-[var(--color-gold)]">
+        <div className="mono mb-[16px] text-[var(--gold)]">
           {data.label}
         </div>
         
-        <h1 className="font-[var(--font-family-mono)] text-[clamp(32px,6vw,64px)] font-normal leading-[1.1] mb-[16px] text-[var(--color-gold)] tracking-[-0.02em] uppercase">
+        <h1 className="font-[var(--mono)] text-[clamp(32px,6vw,64px)] font-normal leading-[1.1] mb-[16px] text-[var(--gold)] tracking-[-0.02em] uppercase">
           {data.name}
         </h1>
         
-        <p className="text-[clamp(16px,2.5vw,22px)] mb-[24px] text-[var(--color-text)] font-medium">
+        <p className="text-[clamp(16px,2.5vw,22px)] mb-[24px] text-[var(--text)] font-medium">
           {data.title}
         </p>
         
-        <p className="text-base leading-[1.7] max-w-[640px] mx-auto mb-[40px] text-[var(--color-secondary)]">
+        <p className="text-base leading-[1.7] max-w-[640px] mx-auto mb-[40px] text-[var(--secondary)]">
           {data.tagline}
         </p>
         

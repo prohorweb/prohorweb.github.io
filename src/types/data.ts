@@ -38,6 +38,7 @@ export interface ArchitectureData {
   title: string;
   items: string[];
   about?: {
+    sectionNumber: string;
     title: string;
     paragraphs: string[];
   };

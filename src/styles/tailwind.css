@@ -32,6 +32,12 @@ body {
   overflow-x: hidden;
 }
 
+input,
+textarea,
+button {
+  line-height: normal;
+}
+
 .mono {
   font-family: var(--mono);
   font-size: 11px;
@@ -73,6 +79,7 @@ body {
 
 .hero-photo {
   position: relative;
+  display: inline;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -155,6 +162,7 @@ body {
 .stack-category-title {
   font-size: 14px;
   font-family: var(--mono);
+  font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--gold);
@@ -572,7 +580,6 @@ textarea:focus,
 input:focus-visible,
 textarea:focus-visible {
   outline: none;
-  border-color: var(--gold);
   box-shadow: 0 0 0 1px var(--gold);
 }
 

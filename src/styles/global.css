@@ -80,8 +80,8 @@ body {
   height: 52px;
   border-radius: 50%;
   background: var(--surface);
-  color: var(--gold);
-  border: 1px solid var(--gold);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,7 @@ body {
 .btn-icon-gold:hover {
   background: #D6B36A;
   color: #0B0D12;
+  border-color: #D6B36A;
 }
 
 .btn-icon-gold:active {
@@ -105,6 +106,9 @@ body {
 }
 
 .btn-icon-gold:focus-visible {
+  background: #D6B36A;
+  color: #0B0D12;
+  border-color: #D6B36A;
   outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
@@ -113,4 +117,30 @@ body {
   width: 22px;
   height: 22px;
   fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .contacts-links {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+input:focus,
+textarea:focus,
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+input[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus {
+  border-color: #e85d5d;
+  box-shadow: 0 0 0 1px #e85d5d;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }

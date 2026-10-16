@@ -253,8 +253,8 @@ button {
   color: var(--secondary);
 }
 
-/* Architecture Section */
-.arch-section {
+/* About Section */
+.about-section {
   padding: 80px 32px;
   background: rgba(13, 16, 22, 0.6);
   backdrop-filter: blur(4px);
@@ -262,17 +262,17 @@ button {
   border-top: 1px solid var(--hairline);
 }
 
-.arch-container {
+.about-container {
   max-width: 960px;
   margin: 0 auto;
 }
 
-.arch-label {
+.about-label {
   margin-bottom: 16px;
   color: var(--gold);
 }
 
-.arch-title {
+.about-title {
   font-family: var(--display);
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 600;
@@ -280,36 +280,14 @@ button {
   color: var(--text);
 }
 
-.arch-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.arch-item {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--secondary);
-  padding-left: 28px;
-  position: relative;
-}
-
-.arch-bullet {
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  font-weight: 600;
-}
-
-.arch-about-text {
+.about-text {
   font-size: 16px;
   line-height: 1.7;
   color: var(--secondary);
   margin-bottom: 16px;
 }
 
-.arch-about-text:last-child {
+.about-text:last-child {
   margin-bottom: 0;
 }
 

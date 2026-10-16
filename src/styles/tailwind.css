@@ -80,6 +80,8 @@ button {
 .hero-photo {
   position: relative;
   display: inline;
+  vertical-align: baseline;
+  max-width: none;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -566,6 +568,7 @@ button {
 .btn-icon-gold svg {
   width: 22px;
   height: 22px;
+  vertical-align: baseline;
   fill: currentColor;
 }
 

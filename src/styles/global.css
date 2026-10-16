@@ -74,3 +74,43 @@ body {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.btn-icon-gold {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn-icon-gold:hover {
+  background: #D6B36A;
+  color: #0B0D12;
+}
+
+.btn-icon-gold:active {
+  background: #C29F52;
+  color: #0B0D12;
+  transform: translateY(1px);
+}
+
+.btn-icon-gold:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.btn-icon-gold svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}

@@ -3,6 +3,19 @@
   "title": "Технологический стек",
   "categories": [
     {
+      "name": "Frontend",
+      "tags": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Vite",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
       "name": "Backend",
       "tags": [
         "PHP 8+",
@@ -20,19 +33,6 @@
         "JWT",
         "Python",
         "Go"
-      ]
-    },
-    {
-      "name": "Frontend",
-      "tags": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Vite",
-        "HTML",
-        "CSS"
       ]
     },
     {

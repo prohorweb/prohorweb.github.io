@@ -7,40 +7,40 @@ interface ContactsProps {
 
 export default function Contacts({ data }: ContactsProps) {
   return (
-    <section className="py-[80px] px-[32px] bg-[rgba(13,16,22,0.98)] border-t border-[var(--hairline)]">
-      <div className="max-w-[960px] mx-auto">
-        <div className="mono mb-[16px] text-[var(--gold)]">
+    <section className="contacts-section">
+      <div className="contacts-container">
+        <div className="mono contacts-label">
           {data.sectionNumber}
         </div>
-        <h2 className="font-[var(--display)] text-[clamp(28px,4vw,42px)] font-semibold mb-[20px] text-[var(--text)]">
+        <h2 className="contacts-title">
           {data.title}
         </h2>
         
-        <p className="text-[17px] leading-[1.8] mb-[40px] text-[var(--secondary)]">
+        <p className="contacts-intro">
           {data.intro}
         </p>
         
-        <div className="grid contacts-links gap-[20px] mb-[48px]">
+        <div className="contacts-links">
           {data.links.map((link) => (
             <a
               key={link.label}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="py-[20px] px-[24px] bg-[var(--surface)] border border-[var(--hairline)] rounded-[12px] no-underline text-[var(--text)] font-medium text-base text-center transition-[border-color] duration-200 hover:border-[var(--gold-border)]"
+              className="contacts-link"
             >
               {link.label}
             </a>
           ))}
         </div>
         
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[16px] mb-[48px] p-[28px] bg-[var(--surface)] border border-[var(--gold-border)] rounded-[12px]">
+        <div className="contacts-info">
           {data.info.map((item) => (
             <div key={item.label}>
-              <div className="mono mb-[6px] text-[var(--gold)]">
+              <div className="mono contacts-info-label">
                 {item.label}
               </div>
-              <div className="text-[15px] text-[var(--text)] font-medium">
+              <div className="contacts-info-value">
                 {item.value}
               </div>
             </div>

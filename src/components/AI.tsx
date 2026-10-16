@@ -6,32 +6,29 @@ interface AIProps {
 
 export default function AI({ data }: AIProps) {
   return (
-    <section className="py-[80px] px-[32px] border-t border-[var(--hairline)]">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="mono mb-[16px] text-[var(--gold)]">
+    <section className="ai-section">
+      <div className="ai-container">
+        <div className="mono ai-label">
           {data.sectionNumber}
         </div>
-        <h2 className="font-[var(--display)] text-[clamp(28px,4vw,42px)] font-semibold mb-[20px] text-[var(--text)]">
+        <h2 className="ai-title">
           {data.title}
         </h2>
         
-        <p className="text-[17px] leading-[1.8] mb-[48px] text-[var(--secondary)] max-w-[720px]">
+        <p className="ai-intro">
           {data.intro}
         </p>
         
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-[24px]">
+        <div className="ai-cards">
           {data.cards.map((card) => (
-            <div
-              key={card.label}
-              className="bg-[var(--surface)] border border-[var(--gold-border)] rounded-[12px] p-[20px]"
-            >
-              <div className="mono mb-[12px] text-[var(--gold)]">
+            <div key={card.label} className="ai-card">
+              <div className="mono ai-card-label">
                 {card.label}
               </div>
-              <h3 className="font-[var(--display)] text-[20px] font-semibold mb-[12px] text-[var(--text)]">
+              <h3 className="ai-card-title">
                 {card.title}
               </h3>
-              <p className="text-[15px] leading-[1.7] text-[var(--secondary)]">
+              <p className="ai-card-desc">
                 {card.description}
               </p>
             </div>

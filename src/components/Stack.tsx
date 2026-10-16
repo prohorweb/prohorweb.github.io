@@ -6,56 +6,24 @@ interface StackProps {
 
 export default function Stack({ data }: StackProps) {
   return (
-    <section style={{
-      padding: '80px 32px',
-      background: 'rgba(13, 16, 22, 0.6)',
-      backdropFilter: 'blur(4px)',
-      WebkitBackdropFilter: 'blur(4px)',
-      borderTop: '1px solid var(--hairline)',
-    }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="mono" style={{ marginBottom: '16px', color: 'var(--gold)' }}>
+    <section className="stack-section">
+      <div className="stack-container">
+        <div className="mono stack-label">
           {data.sectionNumber}
         </div>
-        <h2 style={{
-          fontFamily: 'var(--display)',
-          fontSize: 'clamp(28px, 4vw, 42px)',
-          fontWeight: 600,
-          marginBottom: '48px',
-          color: 'var(--text)',
-        }}>
+        <h2 className="stack-title">
           {data.title}
         </h2>
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+        <div className="stack-categories">
           {data.categories.map((category) => (
             <div key={category.name}>
-              <h3 style={{
-                fontSize: '14px',
-                fontFamily: 'var(--mono)',
-                letterSpacing: '.12em',
-                textTransform: 'uppercase',
-                color: 'var(--gold)',
-                marginBottom: '16px',
-              }}>
+              <h3 className="stack-category-title">
                 {category.name}
               </h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+              <div className="stack-tags">
                 {category.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      padding: '10px 18px',
-                      background: 'rgba(13, 16, 22, 0.5)',
-                      backdropFilter: 'blur(4px)',
-                      WebkitBackdropFilter: 'blur(4px)',
-                      border: '1px solid var(--hairline)',
-                      borderRadius: '8px',
-                      fontSize: '14px',
-                      color: 'var(--text)',
-                      fontWeight: 500,
-                    }}
-                  >
+                  <span key={tag} className="stack-tag">
                     {tag}
                   </span>
                 ))}

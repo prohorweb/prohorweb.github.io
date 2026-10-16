@@ -33,12 +33,6 @@ export interface AIData {
   cards: AICard[];
 }
 
-export interface ArchitectureData {
-  sectionNumber: string;
-  title: string;
-  items: string[];
-}
-
 export interface StackCategory {
   name: string;
   tags: string[];

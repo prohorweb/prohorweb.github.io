@@ -128,52 +128,22 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
     }
   };
 
-  const inputStyle = (hasError: boolean) => ({
-    width: '100%',
-    padding: '14px 16px',
-    background: 'var(--elevated)',
-    border: `1px solid ${hasError ? '#e85d5d' : 'var(--hairline)'}`,
-    borderRadius: '8px',
-    color: 'var(--text)',
-    fontSize: '15px',
-    fontFamily: 'var(--body)',
-    transition: 'border-color .2s',
-  });
-
-  const errorStyle = {
-    marginTop: '6px',
-    fontSize: '13px',
-    color: '#e85d5d',
-    lineHeight: 1.4,
-  };
-
   return (
-    <div style={{
-      background: 'var(--surface)',
-      border: '1px solid var(--gold-border)',
-      borderRadius: '12px',
-      padding: '32px',
-    }}>
-      <h3 style={{
-        fontFamily: 'var(--display)',
-        fontSize: '24px',
-        fontWeight: 600,
-        marginBottom: '24px',
-        color: 'var(--text)',
-      }}>
+    <div className="contact-form">
+      <h3 className="contact-form-title">
         {labels.title}
       </h3>
       
       {status === 'success' ? (
-        <p style={{ fontSize: '16px', lineHeight: 1.6, color: 'var(--gold)' }}>
+        <p className="contact-form-success">
           {labels.success}
         </p>
       ) : (
         <form onSubmit={handleSubmit} noValidate>
-          <div style={{ marginBottom: '20px' }}>
+          <div className="contact-form-field">
             <label 
               htmlFor="contact-name"
-              style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}
+              className="contact-form-label"
             >
               {labels.fields.name}
             </label>
@@ -184,21 +154,21 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
               value={formState.name}
               onChange={(e) => handleChange('name', e.target.value)}
               onBlur={() => handleBlur('name')}
-              style={inputStyle(!!errors.name && touched.name)}
+              className={`contact-form-input ${errors.name && touched.name ? 'error' : ''}`}
               aria-invalid={!!errors.name && touched.name}
               aria-describedby={errors.name && touched.name ? 'name-error' : undefined}
             />
             {errors.name && touched.name && (
-              <div id="name-error" role="alert" style={errorStyle}>
+              <div id="name-error" role="alert" className="contact-form-error">
                 {errors.name}
               </div>
             )}
           </div>
           
-          <div style={{ marginBottom: '20px' }}>
+          <div className="contact-form-field">
             <label 
               htmlFor="contact-email"
-              style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}
+              className="contact-form-label"
             >
               {labels.fields.contact}
             </label>
@@ -209,21 +179,21 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
               value={formState.contact}
               onChange={(e) => handleChange('contact', e.target.value)}
               onBlur={() => handleBlur('contact')}
-              style={inputStyle(!!errors.contact && touched.contact)}
+              className={`contact-form-input ${errors.contact && touched.contact ? 'error' : ''}`}
               aria-invalid={!!errors.contact && touched.contact}
               aria-describedby={errors.contact && touched.contact ? 'contact-error' : undefined}
             />
             {errors.contact && touched.contact && (
-              <div id="contact-error" role="alert" style={errorStyle}>
+              <div id="contact-error" role="alert" className="contact-form-error">
                 {errors.contact}
               </div>
             )}
           </div>
           
-          <div style={{ marginBottom: '20px' }}>
+          <div className="contact-form-field">
             <label 
               htmlFor="contact-message"
-              style={{ display: 'block', marginBottom: '8px', fontSize: '14px', color: 'var(--secondary)' }}
+              className="contact-form-label"
             >
               {labels.fields.message}
             </label>
@@ -234,12 +204,12 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
               value={formState.message}
               onChange={(e) => handleChange('message', e.target.value)}
               onBlur={() => handleBlur('message')}
-              style={{ ...inputStyle(!!errors.message && touched.message), resize: 'vertical', minHeight: '120px' }}
+              className={`contact-form-input contact-form-textarea ${errors.message && touched.message ? 'error' : ''}`}
               aria-invalid={!!errors.message && touched.message}
               aria-describedby={errors.message && touched.message ? 'message-error' : undefined}
             />
             {errors.message && touched.message && (
-              <div id="message-error" role="alert" style={errorStyle}>
+              <div id="message-error" role="alert" className="contact-form-error">
                 {errors.message}
               </div>
             )}
@@ -248,7 +218,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           <input
             type="text"
             name="_gotcha"
-            style={{ display: 'none' }}
+            className="contact-form-gotcha"
             tabIndex={-1}
             autoComplete="off"
             value={formState._gotcha}
@@ -264,25 +234,20 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           </button>
           
           {status === 'error' && (
-            <p style={{ marginTop: '16px', fontSize: '15px', color: '#e85d5d' }}>
+            <p className="contact-form-submit-error">
               {labels.error}
             </p>
           )}
         </form>
       )}
       
-      <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid var(--hairline)' }}>
-        <p style={{ fontSize: '14px', color: 'var(--secondary)', marginBottom: '8px' }}>
+      <div className="contact-form-divider">
+        <p className="contact-form-fallback">
           {labels.fallback}
         </p>
         <a
           href={`mailto:${email}`}
-          style={{
-            color: 'var(--gold)',
-            textDecoration: 'none',
-            fontSize: '15px',
-            fontWeight: 500,
-          }}
+          className="contact-form-email"
         >
           {email}
         </a>

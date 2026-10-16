@@ -17,7 +17,6 @@
 │   │   ├── HeroHalo.tsx
 │   │   ├── About.tsx
 │   │   ├── AI.tsx
-│   │   ├── Architecture.tsx
 │   │   ├── Stack.tsx
 │   │   ├── Contacts.tsx
 │   │   ├── ContactForm.tsx
@@ -27,13 +26,12 @@
 │   │   ├── profile.json
 │   │   ├── about.json
 │   │   ├── ai.json
-│   │   ├── architecture.json
 │   │   ├── stack.json
 │   │   └── contacts.json
 │   ├── types/
 │   │   └── data.ts           # TypeScript interfaces
 │   └── styles/
-│       └── global.css
+│       └── tailwind.css
 ├── assets/
 │   └── img/
 ├── index.html
@@ -49,7 +47,7 @@
 - **`profile.json`** — имя, роль, стек, ссылки (Telegram, Email, GitHub)
 - **`stack.json`** — раздел "Технологический стек" (категории и теги, включая Python/Go)
 - **`ai.json`** — раздел "AI-Driven Development" (8 карточек)
-- **`architecture.json`** — раздел "Архитектурная экспертиза" (список экспертиз)
+- **`about.json`** — раздел "Обо мне"
 - **`contacts.json`** — раздел "Контакты" (форма, ссылки, информация)
 
 Типы данных описаны в `src/types/data.ts` (TypeScript интерфейсы).

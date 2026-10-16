@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Hero from './components/Hero';
 import AI from './components/AI';
-import Architecture from './components/Architecture';
+import About from './components/About';
 import Stack from './components/Stack';
 import Contacts from './components/Contacts';
 import ThreeScene from './components/ThreeScene';
@@ -9,7 +9,7 @@ import ParallaxBackground from './components/ParallaxBackground';
 
 import profileData from './data/profile.json';
 import aiData from './data/ai.json';
-import architectureData from './data/architecture.json';
+import aboutData from './data/about.json';
 import stackData from './data/stack.json';
 import contactsData from './data/contacts.json';
 
@@ -49,22 +49,17 @@ function App() {
       <ParallaxBackground ref={parallaxRef} />
       <ThreeScene />
       
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div className="main-wrapper">
         <Hero data={profileData} />
         <main>
           <Stack data={stackData} />
           <AI data={aiData} />
-          <Architecture data={architectureData} />
+          <About data={aboutData} />
           <Contacts data={contactsData} />
         </main>
-        <footer style={{ 
-          padding: '48px 0', 
-          textAlign: 'center', 
-          background: 'rgba(13, 16, 22, .98)', 
-          borderTop: '1px solid var(--hairline)' 
-        }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 32px' }}>
-            <div className="mono" style={{ color: 'var(--secondary)', letterSpacing: '.12em' }}>
+        <footer className="site-footer">
+          <div className="footer-container">
+            <div className="mono footer-text">
               &copy; 2026 Prohor Efimov / Fullstack AI-Driven Engineer
             </div>
           </div>

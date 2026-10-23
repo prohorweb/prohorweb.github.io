@@ -1,7 +1,7 @@
 {
   "name": "Прохор Ефимов",
   "title": "JavaScript/TypeScript, React, Node.js · PHP/Laravel/Symfony · API-интеграции",
-  "label": "Fullstack AI-Driven Engineer",
+  "label": "Fullstack developer",
   "tagline": "С 2010 года в разработке",
   "photo": "/assets/img/profile.jpg",
   "links": [
@@ -12,18 +12,13 @@
     },
     {
       "label": "Email",
-      "url": "mailto:prohorweb@gmail.com",
+      "url": "mailto:prohorefimov@yandex.ru",
       "icon": "email"
     },
     {
       "label": "GitHub",
       "url": "https://github.com/prohorweb",
       "icon": "github"
-    },
-    {
-      "label": "hh.ru",
-      "url": "https://spb.hh.ru/resume/bf05e638ff028f137c0039ed1f34434b6b5363",
-      "icon": "hh"
     },
     {
       "label": "FL.ru",

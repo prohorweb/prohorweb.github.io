@@ -1,7 +1,7 @@
 {
   "sectionNumber": "04 / Связь",
   "title": "Контакты",
-  "email": "prohorweb@gmail.com",
+  "email": "prohorefimov@yandex.ru",
   "intro": "",
   "links": [
     {
@@ -18,11 +18,6 @@
       "label": "FL.ru",
       "url": "https://www.fl.ru/users/prohorefimov/portfolio/",
       "icon": "flru"
-    },
-    {
-      "label": "hh.ru",
-      "url": "https://spb.hh.ru/resume/bf05e638ff028f137c0039ed1f34434b6b5363",
-      "icon": "hh"
     }
   ],
   "info": [
@@ -45,7 +40,7 @@
     "submit": "Отправить сообщение",
     "submitting": "Отправка...",
     "success": "Спасибо! Сообщение отправлено. Отвечу в ближайшее время",
-    "error": "Не удалось отправить сообщение. Пожалуйста, напишите напрямую на prohorweb@gmail.com",
+    "error": "Не удалось отправить сообщение. Пожалуйста, напишите напрямую на prohorefimov@yandex.ru",
     "fallback": "Или напишите напрямую:",
     "validation": {
       "nameEmpty": "Введите имя",

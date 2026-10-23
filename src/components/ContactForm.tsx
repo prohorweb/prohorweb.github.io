@@ -112,6 +112,7 @@ export default function ContactForm({ labels, email }: ContactFormProps) {
           name: formState.name,
           contact: formState.contact,
           message: formState.message,
+          _cc: email,
         }),
       });
       

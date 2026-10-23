@@ -49,13 +49,13 @@ export default function Hero({ data }: HeroProps) {
           />
         </div>
         
-        <div className="mono hero-label">
-          {data.label}
-        </div>
-        
         <h1 className="hero-name">
           {data.name}
         </h1>
+        
+        <div className="mono hero-label">
+          {data.label}
+        </div>
         
         <p className="hero-subtitle">
           {data.title}

@@ -1,7 +1,7 @@
 {
   "sectionNumber": "04 / Связь",
   "title": "Контакты",
-  "email": "prohorweb@gmail.com",
+  "email": "prohorefimov@yandex.ru",
   "intro": "",
   "links": [
     {
@@ -45,7 +45,7 @@
     "submit": "Отправить сообщение",
     "submitting": "Отправка...",
     "success": "Спасибо! Сообщение отправлено. Отвечу в ближайшее время",
-    "error": "Не удалось отправить сообщение. Пожалуйста, напишите напрямую на prohorweb@gmail.com",
+    "error": "Не удалось отправить сообщение. Пожалуйста, напишите напрямую на prohorefimov@yandex.ru",
     "fallback": "Или напишите напрямую:",
     "validation": {
       "nameEmpty": "Введите имя",

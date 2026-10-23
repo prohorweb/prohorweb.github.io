@@ -60,7 +60,7 @@ function App() {
         <footer className="site-footer">
           <div className="footer-container">
             <div className="mono footer-text">
-              &copy; 2026 Prohor Efimov / Fullstack AI-Driven Engineer
+              &copy; 2026 Prohor Efimov / {profileData.label}
             </div>
           </div>
         </footer>

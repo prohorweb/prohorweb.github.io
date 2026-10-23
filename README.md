@@ -1,6 +1,6 @@
 # Прохор Ефимов — Portfolio Landing
 
-Персональный сайт-портфолио Fullstack AI-Driven Engineer с архитектурным уклоном.
+Персональный сайт-портфолио Fullstack developer с архитектурным уклоном.
 
 ## 🏗️ Архитектура
 
@@ -67,7 +67,7 @@
 
 ## 📝 Форма связи
 
-Форма настроена с Formspree (form id: `mppqkryk`, email: `prohorweb@gmail.com`).
+Форма настроена с Formspree (form id: `mppqkryk`, email: `prohorefimov@yandex.ru`).
 
 Имеет honeypot защиту от спама и fallback на mailto-ссылку.
 
@@ -136,4 +136,4 @@ npm run preview
 
 **Автор**: Prohor Efimov  
 **Telegram**: [@proef](https://t.me/proef)  
-**Email**: [prohorweb@gmail.com](mailto:prohorweb@gmail.com)
+**Email**: [prohorefimov@yandex.ru](mailto:prohorefimov@yandex.ru)
